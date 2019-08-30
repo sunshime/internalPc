@@ -1,4 +1,39 @@
+@import './base.scss';
+
 /* login 登录页面 */
-.login{
-    background-color: salmon;
+.login {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(left, rgb(181, 181, 246), rgb(132, 206, 248));
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, rgb(181, 181, 246), rgb(132, 206, 248));
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, rgb(181, 181, 246), rgb(132, 206, 248));
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, rgb(181, 181, 246), rgb(132, 206, 248));
+  /* 标准的语法 */
+
+  .container {
+    width: 1303px;
+    margin: 300px auto;
+    background-color: #fff;
+    border-radius: 10px;
+
+    .login-icon {
+      width: 701px;
+      height: 495px;
+      img {
+          width: 100%;
+          height: 100%;
+          margin: 82px auto;
+
+      }
+    }
+
+    .lg-form {
+      width: 602px;
+      height: 659px;
+    }
+  }
 }

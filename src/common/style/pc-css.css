@@ -1,5 +1,124 @@
 @charset "UTF-8";
+html, body, div, span, h1, h2, p, a, i, ul, li, textarea, input {
+  margin: 0;
+  padding: 0;
+}
+
+i {
+  font-style: normal;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Microsoft Yahei','simsun','arial','tahoma';
+  color: #333;
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+button, input, select, textarea {
+  font-size: 100%;
+}
+
+img {
+  border: 0;
+}
+
+a,
+img {
+  -webkit-touch-callout: none;
+}
+
+a,
+a:active,
+a:focus,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+
+input[type=password],
+input[type=text],
+textarea {
+  resize: none;
+  outline: 0;
+  -webkit-appearance: none;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+:focus {
+  outline: none;
+}
+
+.clearfix {
+  clear: both;
+  content: "";
+  display: block;
+  overflow: hidden;
+}
+
+.clear {
+  clear: both;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+input {
+  outline: 0 none;
+  border: 0 none;
+}
+
 /* login 登录页面 */
 .login {
-  background-color: salmon;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(left, #b5b5f6, #84cef8);
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #b5b5f6, #84cef8);
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #b5b5f6, #84cef8);
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #b5b5f6, #84cef8);
+  /* 标准的语法 */
+}
+
+.login .container {
+  width: 1303px;
+  margin: 300px auto;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.login .container .login-icon {
+  width: 701px;
+  height: 495px;
+}
+
+.login .container .login-icon img {
+  width: 100%;
+  height: 100%;
+  margin: 82px auto;
+}
+
+.login .container .lg-form {
+  width: 602px;
+  height: 659px;
 }
