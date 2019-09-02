@@ -1,8 +1,11 @@
 @import './base.scss';
 
+
 /* login 登录页面 */
 .login {
   position: fixed;
+  box-sizing: border-box;
+
   width: 100%;
   height: 100%;
   background: -webkit-linear-gradient(left, rgb(181, 181, 246), rgb(132, 206, 248));
@@ -23,17 +26,224 @@
     .login-icon {
       width: 701px;
       height: 495px;
+
       img {
-          width: 100%;
-          height: 100%;
-          margin: 82px auto;
+        width: 100%;
+        height: 100%;
+        margin: 82px auto;
 
       }
     }
 
     .lg-form {
+      box-sizing: border-box;
       width: 602px;
       height: 659px;
+      padding: 124px 82px;
+
+      .title {
+        width: 438px;
+        margin-bottom: 66px;
+
+        .lg-left,
+        .lg-right {
+          padding: 13px 43px;
+          border: 1px solid rgba(236, 236, 236, 1);
+          font-size: 18px;
+          font-family: PingFang SC;
+          font-weight: 400;
+          color: rgba(51, 51, 51, 1);
+        }
+
+        .lg-left {
+          margin-left: 56px;
+          border-radius: 6px 0px 0px 6px;
+        }
+
+        .lg-right {
+          margin-left: 1px;
+          margin-right: 56px;
+          border-radius: 0px 6px 6px 0px;
+        }
+
+        .lg-title {
+          text-align: center;
+          font-size: 26px;
+          font-family: PingFang SC;
+          font-weight: 500;
+          color: #6c6a6a;
+          padding: 13px 0;
+          width: 100%;
+          display: block;
+        }
+      }
+
+      .from-body {
+        background-color: #fff;
+        width: 438px;
+
+        .user-name {
+          margin-bottom: 26px;
+          border: 1px solid rgba(243, 243, 243, 1);
+          border-radius: 6px;
+          padding: 20px 16px;
+
+          .use-icon {
+            width: 28px;
+            height: 28px;
+            margin-right: 15px;
+          }
+
+          .use-input {
+            font-size: 18px;
+            font-family: PingFang SC;
+            font-weight: 400;
+            color: #726a6a;
+            height: 28px;
+            line-height: 28px;
+            width: 360px;
+          }
+
+          ::-webkit-input-placeholder {
+            /*Webkit browsers*/
+            color: rgba(164, 164, 164, 1);
+            font-size: 18px;
+          }
+
+          :-moz-placeholder {
+            /*Mozilla Firefox 4 to 8*/
+            color: rgba(164, 164, 164, 1);
+            font-size: 18px;
+          }
+
+          ::moz-placeholder {
+            /*Mozilla Firefox 19+*/
+            color: rgba(164, 164, 164, 1);
+            font-size: 18px;
+          }
+
+          :-ms-input-placeholder {
+            /*Internet Explorer 10+*/
+            color: rgba(164, 164, 164, 1);
+            font-size: 18px;
+          }
+        }
+
+        .lg-btn {
+          width: 438px;
+          height: 75px;
+          line-height: 75px;
+          text-align: center;
+          background: rgba(122, 172, 255, 1);
+          border-radius: 4px;
+          font-size: 25px;
+          font-family: PingFang SC;
+          font-weight: 400;
+          color: rgba(255, 255, 255, 1);
+          border: 0 none;
+          margin-top: 37px;
+        }
+
+      }
     }
+  }
+}
+
+
+/* home 首页 */
+.home {
+  height: 100vh;
+  overflow: hidden;
+
+
+  .top-title {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(270deg, rgba(129, 82, 255, 1) 0%, rgba(64, 137, 255, 1) 100%);
+
+    .tp-fl {
+      padding: 16px 28px;
+      font-size: 20px;
+      font-family: PingFangSC;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 1);
+
+      .tp-img {
+        width: 26px;
+        height: 26px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .tp-ttl {
+        padding-left: 5px;
+      }
+    }
+
+    .tp-fr {
+      margin-top: -53px;
+      padding: 13px 0;
+      position: relative;
+
+      .tp-name {
+        font-size: 16px;
+        font-family: PingFangSC;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 1);
+        line-height: 29px;
+        padding-right: 108px;
+        float: left;
+      }
+
+      .tp-icon {
+        width: 61px;
+        height: 34px;
+        position: absolute;
+        right: 27px;
+        top: 10px;
+
+        .fl-img {
+          width: 34px;
+          height: 34px;
+          margin-right: 10px;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .fr-img {
+          width: 12px;
+          height: 6px;
+          margin-top: 5px;
+          margin-bottom: 11px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+
+  .fl-aside {
+    width: 260px;
+    height: 100vh;
+    background: rgb(238,246,241);
+    margin-top: 60px;
+  }
+
+  .fr-aside {
+    width: 100%;
+    height: 100vh;
+    background: antiquewhite;
+    margin-top: 60px;
   }
 }

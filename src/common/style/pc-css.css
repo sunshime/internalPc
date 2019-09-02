@@ -1,5 +1,17 @@
 @charset "UTF-8";
-html, body, div, span, h1, h2, p, a, i, ul, li, textarea, input {
+html,
+body,
+div,
+span,
+h1,
+h2,
+p,
+a,
+i,
+ul,
+li,
+textarea,
+input {
   margin: 0;
   padding: 0;
 }
@@ -11,17 +23,21 @@ i {
 body {
   font-size: 16px;
   line-height: 1.5;
-  font-family: 'Microsoft Yahei','simsun','arial','tahoma';
+  font-family: 'Microsoft Yahei', 'simsun', 'arial', 'tahoma';
   color: #333;
   box-sizing: border-box;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-size: 100%;
   font-weight: normal;
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font-size: 100%;
 }
 
@@ -88,6 +104,7 @@ input {
 /* login 登录页面 */
 .login {
   position: fixed;
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
   background: -webkit-linear-gradient(left, #b5b5f6, #84cef8);
@@ -119,6 +136,209 @@ input {
 }
 
 .login .container .lg-form {
+  box-sizing: border-box;
   width: 602px;
   height: 659px;
+  padding: 124px 82px;
+}
+
+.login .container .lg-form .title {
+  width: 438px;
+  margin-bottom: 66px;
+}
+
+.login .container .lg-form .title .lg-left,
+.login .container .lg-form .title .lg-right {
+  padding: 13px 43px;
+  border: 1px solid #ececec;
+  font-size: 18px;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #333333;
+}
+
+.login .container .lg-form .title .lg-left {
+  margin-left: 56px;
+  border-radius: 6px 0px 0px 6px;
+}
+
+.login .container .lg-form .title .lg-right {
+  margin-left: 1px;
+  margin-right: 56px;
+  border-radius: 0px 6px 6px 0px;
+}
+
+.login .container .lg-form .title .lg-title {
+  text-align: center;
+  font-size: 26px;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #6c6a6a;
+  padding: 13px 0;
+  width: 100%;
+  display: block;
+}
+
+.login .container .lg-form .from-body {
+  background-color: #fff;
+  width: 438px;
+}
+
+.login .container .lg-form .from-body .user-name {
+  margin-bottom: 26px;
+  border: 1px solid #f3f3f3;
+  border-radius: 6px;
+  padding: 20px 16px;
+}
+
+.login .container .lg-form .from-body .user-name .use-icon {
+  width: 28px;
+  height: 28px;
+  margin-right: 15px;
+}
+
+.login .container .lg-form .from-body .user-name .use-input {
+  font-size: 18px;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #726a6a;
+  height: 28px;
+  line-height: 28px;
+  width: 360px;
+}
+
+.login .container .lg-form .from-body .user-name ::-webkit-input-placeholder {
+  /*Webkit browsers*/
+  color: #a4a4a4;
+  font-size: 18px;
+}
+
+.login .container .lg-form .from-body .user-name :-moz-placeholder {
+  /*Mozilla Firefox 4 to 8*/
+  color: #a4a4a4;
+  font-size: 18px;
+}
+
+.login .container .lg-form .from-body .user-name ::moz-placeholder {
+  /*Mozilla Firefox 19+*/
+  color: #a4a4a4;
+  font-size: 18px;
+}
+
+.login .container .lg-form .from-body .user-name :-ms-input-placeholder {
+  /*Internet Explorer 10+*/
+  color: #a4a4a4;
+  font-size: 18px;
+}
+
+.login .container .lg-form .from-body .lg-btn {
+  width: 438px;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+  background: #7aacff;
+  border-radius: 4px;
+  font-size: 25px;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: white;
+  border: 0 none;
+  margin-top: 37px;
+}
+
+/* home 首页 */
+.home {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.home .top-title {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(270deg, #8152ff 0%, #4089ff 100%);
+}
+
+.home .top-title .tp-fl {
+  padding: 16px 28px;
+  font-size: 20px;
+  font-family: PingFangSC;
+  font-weight: 500;
+  color: white;
+}
+
+.home .top-title .tp-fl .tp-img {
+  width: 26px;
+  height: 26px;
+}
+
+.home .top-title .tp-fl .tp-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.home .top-title .tp-fl .tp-ttl {
+  padding-left: 5px;
+}
+
+.home .top-title .tp-fr {
+  margin-top: -53px;
+  padding: 13px 0;
+  position: relative;
+}
+
+.home .top-title .tp-fr .tp-name {
+  font-size: 16px;
+  font-family: PingFangSC;
+  font-weight: 400;
+  color: white;
+  line-height: 29px;
+  padding-right: 108px;
+  float: left;
+}
+
+.home .top-title .tp-fr .tp-icon {
+  width: 61px;
+  height: 34px;
+  position: absolute;
+  right: 27px;
+  top: 10px;
+}
+
+.home .top-title .tp-fr .tp-icon .fl-img {
+  width: 34px;
+  height: 34px;
+  margin-right: 10px;
+}
+
+.home .top-title .tp-fr .tp-icon .fl-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.home .top-title .tp-fr .tp-icon .fr-img {
+  width: 12px;
+  height: 6px;
+  margin-top: 5px;
+  margin-bottom: 11px;
+}
+
+.home .top-title .tp-fr .tp-icon .fr-img img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.home .fl-aside {
+  width: 260px;
+  height: 100vh;
+  background: #eef6f1;
+  margin-top: 60px;
+}
+
+.home .fr-aside {
+  width: 100%;
+  height: 100vh;
+  background: antiquewhite;
+  margin-top: 60px;
 }

@@ -46,7 +46,7 @@ img {
 
 a,
 img {
-  -webkit-touch-callout: none
+  -webkit-touch-callout: none;
 }
 
 a,
@@ -54,7 +54,7 @@ a:active,
 a:focus,
 a:hover,
 a:visited {
-  text-decoration: none
+  text-decoration: none;
 }
 
 input[type=password],
@@ -65,7 +65,7 @@ textarea {
   -webkit-appearance: none;
   white-space: pre-wrap;
   word-wrap: break-word;
-  background: #fff
+  background: #fff;
 }
 
 ul {
@@ -80,7 +80,7 @@ ul {
   clear: both;
   content: "";
   display: block;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .clear {
@@ -98,4 +98,23 @@ ul {
 input {
   outline: 0 none;
   border: 0 none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.toast {
+  position: fixed;
+  top: 40%;
+  left: 43%;
+}
+
+.toast .desc {
+  width: 60%;
+  font-size: 20px;
+  color: #fff;
+  padding: 18px 24px;
+  background: rgba(0, 0, 0, 0.51);
+  border-radius: 15px;
 }

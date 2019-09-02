@@ -1,0 +1,22 @@
+@import './base.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+
+// 提示框组件
+.toast {
+  position: fixed;
+  top: 40%;
+  left: 43%;
+
+  .desc {
+    width: 60%;
+    font-size: 20px;
+    color: #fff;
+    padding: 18px 24px;
+    background: rgba(0, 0, 0, 0.51);
+    border-radius: 15px;
+  }
+}
