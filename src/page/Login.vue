@@ -76,7 +76,7 @@ export default {
             console.log(res);
             if (res.status == 200) {
               console.log("登录成功。。。");
-              this.$router.push('home');
+              this.$router.push({name: 'home'});
               //  跳转到首页
             } else if (res.status == 203) {  // 203 密码错误
               this.toastStatus = true;

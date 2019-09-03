@@ -23,70 +23,42 @@
       <el-container>
         <el-aside class="fl-aside">
           <el-menu :default-openeds="['1', '4']">
-            <el-submenu index="1">
+            <el-submenu :index="proAsideObj.id+''">
               <template slot="title">
-                <i class="el-icon-message"></i>项目
+                <i class="el-icon-message"></i>
+                {{proAsideObj.asideTitle}}
               </template>
-              <el-submenu index="1-1">
-                <template slot="title">用户申请开通会员</template>
-                <el-menu-item index="1-1-1">新建申请单</el-menu-item>
-                <el-menu-item index="1-1-2">受理&完成申请单</el-menu-item>
-                <el-menu-item index="1-1-3">申请开通会员功能总表</el-menu-item>
+              <el-submenu
+                :index="proAsideObj.id+'-'+item.sid+''"
+                v-for="item in proAsideObj.proList"
+                :key="item.sid"
+              >
+                <template slot="title">{{item.proTitle}}</template>
+                <el-menu-item
+                  :index="'/'+thrItem.path"
+                  v-for="thrItem in item.list"
+                  :key="thrItem.tid"
+                >{{thrItem.name}}</el-menu-item>
               </el-submenu>
+            </el-submenu>
 
-              <el-submenu index="1-2">
-                <template slot="title">为用户申请会员认证</template>
-                <el-menu-item index="1-2-1">申请会员认证</el-menu-item>
-                <el-menu-item index="1-2-2">提交认证资料</el-menu-item>
-                <el-menu-item index="1-2-3">会员认证</el-menu-item>
-                <el-menu-item index="1-2-4">申请会员认证总表</el-menu-item>
-                <el-menu-item index="1-2-5">会员总表</el-menu-item>
-              </el-submenu>
-              <el-submenu index="1-3">
-                <template slot="title">第三方人员管理</template>
-                <el-menu-item index="1-3-1">中心人员</el-menu-item>
-                <el-menu-item index="1-3-2">次要人员</el-menu-item>
-                <el-menu-item index="1-3-3">普通人员</el-menu-item>
-              </el-submenu>
-               <el-submenu index="1-4">
-                <template slot="title">设置</template>
-                <el-menu-item index="1-4-1">账号</el-menu-item>
-                <el-menu-item index="1-4-2">密码</el-menu-item>
-              </el-submenu>
-
-            </el-submenu>
-            <el-submenu index="2">
+            <el-submenu :index="item.id+''" v-for="item in asideList" :key="item.id">
               <template slot="title">
-                <i class="el-icon-menu"></i>异常监控
+                <i class="el-icon-setting"></i>
+                {{item.asideTitle}}
               </template>
               <el-menu-item-group>
-                <el-menu-item index="2-1">数据同步异常</el-menu-item>
-                <el-menu-item index="2-2">流水异常</el-menu-item>
-                <el-menu-item index="2-3">余额异常</el-menu-item>
-              </el-menu-item-group>
-            </el-submenu>
-            <el-submenu index="3">
-              <template slot="title">
-                <i class="el-icon-menu"></i>其他设置
-              </template>
-              <el-menu-item-group>
-                <el-menu-item index="3-1">选项1</el-menu-item>
-                <el-menu-item index="3-2">选项2</el-menu-item>
-              </el-menu-item-group>
-            </el-submenu>
-            <el-submenu index="4">
-              <template slot="title">
-                <i class="el-icon-setting"></i>内部管理
-              </template>
-              <el-menu-item-group>
-                <el-menu-item index="3-1">人员</el-menu-item>
-                <el-menu-item index="3-2">权限</el-menu-item>
+                <el-menu-item
+                  :index="'/'+sbmitItems.path"
+                  v-for="sbmitItems in item.list"
+                  :key="sbmitItems.sid"
+                >{{sbmitItems.name}}</el-menu-item>
               </el-menu-item-group>
             </el-submenu>
           </el-menu>
         </el-aside>
         <el-main class="fr-aside">
-            <router-view></router-view>
+          <router-view></router-view>
         </el-main>
       </el-container>
     </el-container>
@@ -96,8 +68,25 @@
 export default {
   data() {
     return {
-      userName: "默笙"
+      userName: "默笙",
+      asideList: [], // 其他列表
+      proAsideObj: {}  //项目栏部分
     };
+  },
+  methods: {
+    getAsideData() {
+      this.axios
+        .get(
+          "https://www.easy-mock.com/mock/5d6c911659e8cb63ee8cd4f5/internalPc/home/getSideData"
+        )
+        .then(res => {
+          this.asideList = res.data.asideList;
+          this.proAsideObj = res.data.proObj;
+        });
+    }
+  },
+  mounted() {
+    this.getAsideData();
   }
 };
 </script>
